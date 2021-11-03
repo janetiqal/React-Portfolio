@@ -4,7 +4,6 @@ import {
   Toolbar,
   Typography,
   makeStyles,
-  Button
 } from "@material-ui/core";
 
 import DrawerComponent from "./Drawer";
