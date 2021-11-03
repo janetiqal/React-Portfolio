@@ -1,8 +1,8 @@
 import React from "react";
 import { Typography, makeStyles, Button, Box, Grid } from "@material-ui/core";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import ArrowForwardSharpIcon from '@mui/icons-material/ArrowForwardSharp';
-import { Icon } from "@mui/material";
+
+
 
 const useStyles = makeStyles((theme) => ({
   aboutMeHeader: {

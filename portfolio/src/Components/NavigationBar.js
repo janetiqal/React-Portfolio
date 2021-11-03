@@ -35,7 +35,6 @@ const useStyles = makeStyles((theme) => ({
   },
   spacing:{
   justifyContent: 'space-between',
-
   }
 }));
 
