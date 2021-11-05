@@ -12,7 +12,6 @@ import AboutMe from "../Components/AboutMe.js";
 const useStyles = makeStyles((theme) => ({
   intro: {
     display: "flex",
-    // width:'max-content',
     [theme.breakpoints.down("md")]: {
       background: theme.palette.primary.dark,
       display: "flex",
@@ -36,7 +35,6 @@ const useStyles = makeStyles((theme) => ({
       background: theme.palette.secondary.dark,
     },
     [theme.breakpoints.down("md")]: {
-      // background: theme.palette.primary.dark,
       width: "auto",
     },
   },
