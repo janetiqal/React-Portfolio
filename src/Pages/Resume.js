@@ -1,13 +1,10 @@
 import React from "react";
+import Resume from "../Components/Resume";
 
-function ResumePage(){
-    return (
-        <div>
-        <h1>resume</h1>
-        
-        </div>
-    )
+function ResumePage() {
+  return (
+    <Resume />
+  )
 }
 
-
-export default ResumePage
+export default ResumePage;
