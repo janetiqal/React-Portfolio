@@ -39,11 +39,11 @@ function Resume() {
       <Button className= {classes.button} href="https://drive.google.com/file/d/18qlAP49ZwLy8priQLGHrkALbLwoFiysa/view?usp=sharing">
         View as PDF
       </Button>
-
         <iframe
           src="https://drive.google.com/file/d/18qlAP49ZwLy8priQLGHrkALbLwoFiysa/preview" 
           width='100%'
           height='700px'
+          title="Janet Iqal's Resume"
           allow="autoplay"
         ></iframe>
       </Container>
