@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.js": "/React-Portfolio/static/js/main.fa1455d9.chunk.js",
+    "main.js.map": "/React-Portfolio/static/js/main.fa1455d9.chunk.js.map",
+    "runtime-main.js": "/React-Portfolio/static/js/runtime-main.9fbd6762.js",
+    "runtime-main.js.map": "/React-Portfolio/static/js/runtime-main.9fbd6762.js.map",
+    "static/js/2.85af7ee4.chunk.js": "/React-Portfolio/static/js/2.85af7ee4.chunk.js",
+    "static/js/2.85af7ee4.chunk.js.map": "/React-Portfolio/static/js/2.85af7ee4.chunk.js.map",
+    "index.html": "/React-Portfolio/index.html",
+    "static/js/2.85af7ee4.chunk.js.LICENSE.txt": "/React-Portfolio/static/js/2.85af7ee4.chunk.js.LICENSE.txt",
+    "static/media/colorado.497701c1.jpg": "/React-Portfolio/static/media/colorado.497701c1.jpg",
+    "static/media/employeetracker.2c324f0d.png": "/React-Portfolio/static/media/employeetracker.2c324f0d.png",
+    "static/media/nannypoppins.d6d34d0d.png": "/React-Portfolio/static/media/nannypoppins.d6d34d0d.png",
+    "static/media/readme.4528792a.png": "/React-Portfolio/static/media/readme.4528792a.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9fbd6762.js",
+    "static/js/2.85af7ee4.chunk.js",
+    "static/js/main.fa1455d9.chunk.js"
+  ]
+}
