@@ -1,17 +1,48 @@
 import React, { useRef } from "react";
 import emailjs from "emailjs-com";
 
-import { Container } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core";
-import { display } from "@material-ui/system";
+import {
+  Container,
+  makeStyles,
+  Button,
+  Typography,
+  Box,
+} from "@material-ui/core";
+import ContactIcons from "./ContactIcons";
 
 const useStyles = makeStyles((theme) => ({
+  header: {
+    margin:'0 auto',
+    width:'60%',
+    display:'flex',
+    justifyContent:'space-around',
+    padding:30,
+    // marginBottom:15,
+    marginTop:15
+  },
   container: {
     display: "flex",
     flexDirection: "column",
-    width:"50%",
-    margin:'0 auto'
+    width: "60%",
+    margin: "0 auto",
+    padding: 15,
+    border: `5px solid ${theme.palette.secondary.dark}`,
+    backgroundColor: theme.palette.primary.light,
   },
+  label: {
+    fontFamily: "Roboto",
+    padding: 15,
+    fontSize: 20,
+  },
+  inputs: {
+    lineHeight: "1.5em",
+    fontSize: 20,
+    fontFamily: "Roboto",
+  },
+  text:{
+    lineHeight:'1.5em',
+    color:theme.palette.secondary.dark
+  }
 }));
 
 function ContactForm() {
@@ -23,10 +54,10 @@ function ContactForm() {
 
     emailjs
       .sendForm(
-        process.env.REACT_APP_serviceKey,
-        process.env.REACT_APP_templatekEY,
+        process.env.REACT_APP_SERVICE_KEY,
+        process.env.REACT_APP_TEMPLATE_KEY,
         form.current,
-        process.env.REACT_APP_id
+        process.env.REACT_APP_ID
       )
       .then(
         (result) => {
@@ -36,17 +67,30 @@ function ContactForm() {
           console.log(error.text);
         }
       );
+    e.target.reset();
   };
   return (
     <Container >
+     <Box className={classes.header}>
+        <Typography variant="h4" className={classes.text}> CONTACT ME </Typography>
+        <ContactIcons />
+     </Box>
+
       <form ref={form} onSubmit={sendEmail} className={classes.container}>
-        <label>Name</label>
-        <input type="text" name="user_name" />
-        <label>Email</label>
-        <input type="email" name="user_email" />
-        <label>Message</label>
-        <textarea name="message" />
-        <input type="submit" value="Send" />
+        <label className={classes.label}>Name</label>
+        <input className={classes.inputs} type="text" name="user_name" />
+        <label className={classes.label}>Email</label>
+        <input className={classes.inputs} type="email" name="user_email" />
+        <label className={classes.label}>Message</label>
+        <textarea
+          className={classes.inputs}
+          cols="30"
+          rows="8"
+          name="message"
+        />
+        <Button type="submit" value="Send">
+          Send
+        </Button>
       </form>
     </Container>
   );
