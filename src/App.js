@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import NavBar from "./Components/NavigationBar";
+import Footer from "./Components/Footer";
 import { CssBaseline } from "@material-ui/core";
 import { ThemeProvider } from "@material-ui/styles";
 import  theme  from "./theme.js";
@@ -24,6 +25,7 @@ function App() {
             <Route path="/contact" exact  component={ContactPage}/>
           </Switch>
         </Router>
+        <Footer />
     </ThemeProvider>
     </div>
   );
