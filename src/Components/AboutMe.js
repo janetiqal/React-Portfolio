@@ -71,7 +71,7 @@ function AboutMe() {
         </Typography>
         <Typography variant="h6" className={classes.textAboutMe}>
           Enough, about me. Let's go see my work.
-          <Button variant='text' href='/work'>
+          <Button variant='text' href='/React-Portfolio/work'>
             <ArrowForwardIcon></ArrowForwardIcon>
           </Button>
         </Typography>

@@ -20,7 +20,6 @@ function App() {
           <NavBar />
           <Switch>
           <Route path="/React-Portfolio/" exact component={HomePage}/>
-            <Route path="/React-Portfolio/home" exact component={HomePage}/>
             <Route path="/React-Portfolio/work" exact component={WorkPage}/>
             <Route path="/React-Portfolio/resume" exact component={ResumePage}/>
             <Route path="/React-Portfolio/contact" exact  component={ContactPage}/>

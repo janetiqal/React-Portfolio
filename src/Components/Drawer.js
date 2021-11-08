@@ -44,7 +44,7 @@ function DrawerComponent() {
         <List>
           <ListItem onClick={() => setOpenDrawer(false)}>
             <ListItemText>
-              <Link to="/" className={classes.link}>
+              <Link to="//React-Portfolio/" className={classes.link}>
                 Home
               </Link>
             </ListItemText>
@@ -52,7 +52,7 @@ function DrawerComponent() {
           <Divider />
           <ListItem onClick={() => setOpenDrawer(false)}>
             <ListItemText>
-              <Link to="/work" className={classes.link}>
+              <Link to="/React-Portfolio/work" className={classes.link}>
                 Work
               </Link>
             </ListItemText>
@@ -60,7 +60,7 @@ function DrawerComponent() {
           <Divider />
           <ListItem onClick={() => setOpenDrawer(false)}>
             <ListItemText>
-              <Link to="/contact" className={classes.link}>
+              <Link to="/React-Portfolio/contact" className={classes.link}>
                 Contact
               </Link>
             </ListItemText>
@@ -68,7 +68,7 @@ function DrawerComponent() {
           <Divider />
           <ListItem onClick={() => setOpenDrawer(false)}>
             <ListItemText>
-              <Link to="/resume" className={classes.link}>
+              <Link to="/React-Portfolio/resume" className={classes.link}>
                 Resume
               </Link>
             </ListItemText>
