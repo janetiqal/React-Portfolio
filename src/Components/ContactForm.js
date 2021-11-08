@@ -16,8 +16,7 @@ const useStyles = makeStyles((theme) => ({
     width:'60%',
     display:'flex',
     justifyContent:'space-around',
-    padding:30,
-    // marginBottom:15,
+    padding:15,
     marginTop:15
   },
   container: {
@@ -42,6 +41,16 @@ const useStyles = makeStyles((theme) => ({
   text:{
     lineHeight:'1.5em',
     color:theme.palette.secondary.dark
+  },
+  sendBtn:{
+    width:'30%',
+    margin:'0 auto',
+    marginTop:15,
+    background: theme.palette.secondary.dark,
+    "&:hover":{
+      background: theme.palette.secondary.main,
+
+    }
   }
 }));
 
@@ -73,7 +82,14 @@ function ContactForm() {
     <Container >
      <Box className={classes.header}>
         <Typography variant="h4" className={classes.text}> CONTACT ME </Typography>
+     </Box>
+     <Box className={classes.header}>
         <ContactIcons />
+     </Box>
+     <Box className={classes.header}>
+        <Typography variant="P" className={classes.text}> github.com/janetiqal</Typography>
+        <Typography variant="P" className={classes.text}> j.iqal35@gmail.com </Typography>
+        <Typography variant="P" className={classes.text}> linkedin.com/in/janetiqal</Typography>     
      </Box>
 
       <form ref={form} onSubmit={sendEmail} className={classes.container}>
@@ -88,8 +104,8 @@ function ContactForm() {
           rows="8"
           name="message"
         />
-        <Button type="submit" value="Send">
-          Send
+        <Button type="submit" value="Send" className={classes.sendBtn}>
+        Send
         </Button>
       </form>
     </Container>

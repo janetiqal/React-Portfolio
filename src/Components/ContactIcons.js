@@ -1,6 +1,6 @@
 import React from "react";
 
-import { IconButton } from "@material-ui/core";
+import { IconButton, Typography } from "@material-ui/core";
 import { GitHub } from "@mui/icons-material";
 import EmailIcon from "@mui/icons-material/Email";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
