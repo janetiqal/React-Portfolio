@@ -19,10 +19,10 @@ function App() {
         <Router>
           <NavBar />
           <Switch>
-            <Route path="/" exact component={HomePage}/>
-            <Route path="/work" exact component={WorkPage}/>
-            <Route path="/resume" exact component={ResumePage}/>
-            <Route path="/contact" exact  component={ContactPage}/>
+            <Route path="/React-Portfolio/" exact component={HomePage}/>
+            <Route path="/React-Portfolio/work" exact component={WorkPage}/>
+            <Route path="/React-Portfolio/resume" exact component={ResumePage}/>
+            <Route path="//React-Portfoliocontact" exact  component={ContactPage}/>
           </Switch>
         </Router>
         <Footer />
