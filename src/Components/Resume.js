@@ -36,11 +36,11 @@ function Resume() {
     <Box className={classes.root}>
       <Container className={classes.container}>
       <Typography className={classes.text} variant='h6'>To view my resume as a PDF, click the button and you will then be able to download it.</Typography>
-      <Button className= {classes.button} href="https://drive.google.com/file/d/18qlAP49ZwLy8priQLGHrkALbLwoFiysa/view?usp=sharing">
+      <Button className= {classes.button} href="https://drive.google.com/file/d/1UKN2X-ppl9kFRkcoCWtK3NtsUu2xUTG2/view?usp=sharing">
         View as PDF
       </Button>
         <iframe
-          src="https://drive.google.com/file/d/18qlAP49ZwLy8priQLGHrkALbLwoFiysa/preview" 
+          src="https://drive.google.com/file/d/1UKN2X-ppl9kFRkcoCWtK3NtsUu2xUTG2/preview" 
           width='100%'
           height='700px'
           title="Janet Iqal's Resume"
