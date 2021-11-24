@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   makeStyles,
   Card,
@@ -8,12 +8,14 @@ import {
   Typography,
   Box,
   CardActions,
-  CardHeader
+  CardHeader,
+  Collapse,
 } from "@material-ui/core";
 
 import GitHubIcon from "@mui/icons-material/GitHub";
 import { IconButton } from "@material-ui/core";
-import InsertLinkOutlinedIcon from '@mui/icons-material/InsertLinkOutlined';
+import InsertLinkOutlinedIcon from "@mui/icons-material/InsertLinkOutlined";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -21,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
     paddingRight: 20,
     margin: 15,
     alignItems: "center",
-    justifyContent: "center"
+    justifyContent: "center",
   },
   header: {
     background: theme.palette.secondary.dark,
@@ -31,8 +33,8 @@ const useStyles = makeStyles((theme) => ({
   cardItem: {
     boxShadow: "10 solid theme.palette.secondary.dark",
     "&:hover": {
-        zIndex:1
-      }
+      zIndex: 1,
+    },
   },
   cardContent: {
     background: theme.palette.primary.light,
@@ -41,60 +43,77 @@ const useStyles = makeStyles((theme) => ({
   aligner: {
     alignContent: "center",
   },
-  linkButtons:{
+  linkButtons: {
     background: theme.palette.secondary.main,
     "&:hover": {
-        color: theme.palette.secondary.main,
-        background: theme.palette.primary.dark
-      }
+      color: theme.palette.secondary.main,
+      background: theme.palette.primary.dark,
+    },
   },
-  opposingLink:{
+  opposingLink: {
     background: theme.palette.primary.dark,
     color: theme.palette.secondary.main,
     "&:hover": {
-        color: theme.palette.primary.main,
-        background: theme.palette.secondary.main
+      color: theme.palette.primary.main,
+      background: theme.palette.secondary.main,
     },
+  },
+  btnSpacing:{
+    justifyContent:'space-around'
   }
 }));
 
 function WorkCards(props) {
   const classes = useStyles();
+  const [expanded, setExpanded] = useState(false);
 
+  const handleChange = () => {
+    setExpanded(!expanded);
+  };
   return (
     <Grid item xs={12} sm={6} md={6} lg={4} className={classes.aligner}>
       <Box className={classes.container}>
-        <Card  >
+        <Card>
           <CardHeader
             title={props.title}
             subheader={props.subheader}
             className={classes.header}
-          >
-          </CardHeader>
+          ></CardHeader>
           <CardMedia component="img" image={props.photo} />
           <CardContent className={classes.cardContent}>
             <Typography gutterBottom paragraph>
               {props.description}
             </Typography>
           </CardContent>
-          <CardActions>
-            <IconButton
-            className={classes.linkButtons}
-              aria-label="github link"
-              href={props.githubRepo}
-              target="_blank"
-            >
-              <GitHubIcon />
-            </IconButton>
-            <IconButton
-            className={classes.opposingLink}
-              aria-label="github link"
-              href={props.deployedApp}
-              target="_blank"
-            >
-            <InsertLinkOutlinedIcon />
+          <CardActions disableSpacing className={classes.btnSpacing}>
+              <IconButton
+                className={classes.linkButtons}
+                aria-label="github link"
+                href={props.githubRepo}
+                target="_blank"
+              >
+                <GitHubIcon />
+              </IconButton>
+              <IconButton
+                className={classes.opposingLink}
+                aria-label="github link"
+                href={props.deployedApp}
+                target="_blank"
+              >
+                <InsertLinkOutlinedIcon />
+              </IconButton>
+
+            <IconButton onClick={handleChange}  className={classes.linkButtons} >
+              <ExpandMoreIcon  />
             </IconButton>
           </CardActions>
+          <Collapse in={expanded} timeout="auto" unmountOnExit >
+            <CardContent>
+            <CardHeader title="Technologies"  className={classes.header}>
+            </CardHeader>
+              <Typography>{props.technologies}</Typography>
+            </CardContent>
+          </Collapse>
         </Card>
       </Box>
     </Grid>
