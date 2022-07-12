@@ -1,6 +1,7 @@
 import React from "react";
-import { Typography, makeStyles, Button, Box, Grid } from "@material-ui/core";
+import { Typography, makeStyles, Box, Grid, Link } from "@material-ui/core";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+// import { Link } from "react-router-dom";
 
 
 
@@ -71,9 +72,9 @@ function AboutMe() {
         </Typography>
         <Typography variant="h6" className={classes.textAboutMe}>
           Enough, about me. Let's go see my work.
-          <Button variant='text' href='/React-Portfolio/work'>
-            <ArrowForwardIcon></ArrowForwardIcon>
-          </Button>
+          <Link variant='button' href='/React-Portfolio/work'>
+           <ArrowForwardIcon ></ArrowForwardIcon>
+          </Link>
         </Typography>
       </Box>
     </>

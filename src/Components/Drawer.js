@@ -44,7 +44,7 @@ function DrawerComponent() {
         <List>
           <ListItem onClick={() => setOpenDrawer(false)}>
             <ListItemText>
-              <Link to="//React-Portfolio/" className={classes.link}>
+              <Link to="/React-Portfolio/" className={classes.link}>
                 Home
               </Link>
             </ListItemText>

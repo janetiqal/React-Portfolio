@@ -1,46 +1,47 @@
 import React from "react";
 import { Box, Button, Container, makeStyles, Typography } from "@material-ui/core";
 
-const useStyles=makeStyles((theme)=> ({
-    root:{
-        background: theme.palette.secondary.dark
-    },
-    container:{
-        display:'flex',
-        flexDirection:'column',
-        margin: '0 auto',
-        padding:30
-    },
-    button:{
-        margin:'auto',
-        width:'fit-content',
-        marginBottom:30,
-        background:theme.palette.primary.main,
-        color:'white',
-        '&:hover':{
-            color:theme.palette.primary.dark
-        }
-    },
-    text:{
-        textAlign:'center',
-        color:'black',
-        paddingBottom:15
+const useStyles = makeStyles((theme) => ({
+  root: {
+    background: theme.palette.secondary.dark
+  },
+  container: {
+    display: 'flex',
+    flexDirection: 'column',
+    margin: '0 auto',
+    padding: 30
+  },
+  button: {
+    margin: 'auto',
+    width: 'fit-content',
+    marginBottom: 30,
+    background: theme.palette.primary.main,
+    color: 'white',
+    '&:hover': {
+      color: theme.palette.primary.dark
     }
+  },
+  text: {
+    textAlign: 'center',
+    color: 'black',
+    paddingBottom: 15
+  }
 
 }));
 
 
 function Resume() {
-    const classes=useStyles();
+  const classes = useStyles();
   return (
     <Box className={classes.root}>
       <Container className={classes.container}>
-      <Typography className={classes.text} variant='h6'>To view my resume as a PDF, click the button and you will then be able to download it.</Typography>
-      <Button className= {classes.button} href="https://drive.google.com/file/d/1UKN2X-ppl9kFRkcoCWtK3NtsUu2xUTG2/view?usp=sharing">
-        View as PDF
-      </Button>
+        <Typography className={classes.text} variant='h6'>To view my resume as a PDF, click the button and you will then be able to download it.</Typography>
+        <Button className={classes.button}
+          href="https://drive.google.com/file/d/1J5HYaZoylPYY1Lcz-DJTYlW9MuLBa1mv/view?usp=sharing"
+        >
+        </Button>
         <iframe
-          src="https://drive.google.com/file/d/1UKN2X-ppl9kFRkcoCWtK3NtsUu2xUTG2/preview" 
+          src="https://drive.google.com/file/d/1J5HYaZoylPYY1Lcz-DJTYlW9MuLBa1mv/preview"
           width='100%'
           height='700px'
           title="Janet Iqal's Resume"
