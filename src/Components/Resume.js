@@ -38,7 +38,7 @@ function Resume() {
         <Typography className={classes.text} variant='h6'>To view my resume as a PDF, click the button and you will then be able to download it.</Typography>
         <Button className={classes.button}
           href="https://drive.google.com/file/d/1j6YYrFLxLCBdECdS2sTaE_sTBAaqYMZB/view?usp=sharing"
-        >
+        >Download as PDF
         </Button>
         <iframe
           src="https://drive.google.com/file/d/1j6YYrFLxLCBdECdS2sTaE_sTBAaqYMZB/preview"
