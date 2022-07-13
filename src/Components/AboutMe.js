@@ -1,7 +1,7 @@
 import React from "react";
-import { Typography, makeStyles, Box, Grid, Link } from "@material-ui/core";
+import { Typography, makeStyles, Box, Grid } from "@material-ui/core";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 
@@ -13,6 +13,15 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("md")]: {
       textAlign: "center",
       fontSize: "2rem",
+    },
+  },
+  link: {
+    textDecoration: "none",
+    color: theme.palette.primary.main,
+    fontWeight: "bold",
+    fontSize: "20px",
+    "&:hover": {
+      color: theme.palette.secondary.main,
     },
   },
   textAboutMe: {
@@ -72,7 +81,7 @@ function AboutMe() {
         </Typography>
         <Typography variant="h6" className={classes.textAboutMe}>
           Enough, about me. Let's go see my work.
-          <Link variant='button' href='/React-Portfolio/work'>
+          <Link className={classes.link} to='/React-Portfolio/work'>
            <ArrowForwardIcon ></ArrowForwardIcon>
           </Link>
         </Typography>
